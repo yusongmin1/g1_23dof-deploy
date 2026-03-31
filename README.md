@@ -2,8 +2,12 @@
 
 本代码可以在实物部署训练的网络。目前支持的机器人包括 Unitree G1 23 dof 
 
-![real_g1](./deploy.mp4)
 
+<div align="center">
+  <video width="700" controls>
+    <source src="./deploy.mp4" type="video/mp4">
+  </video>
+</div>
 
 
 ## 启动用法
