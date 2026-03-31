@@ -3,11 +3,9 @@
 本代码可以在实物部署训练的网络。目前支持的机器人包括 Unitree G1 23 dof 
 
 
-<div align="center">
-  <video width="700" controls>
-    <source src="./deploy.mp4" type="video/mp4">
-  </video>
-</div>
+
+#### G1_23 dof 已经部署实物
+![g1](output.gif)
 
 
 ## 启动用法
@@ -71,12 +69,24 @@ python deploy_real_yu_lab.py enp4s0 g1_yu_lab.yaml
 > 提供的模型使用IsaacLab 训练18000轮，在两台G1_23上测试可以短暂脱绳，几分钟，未进行长时间鲁棒测试
 > ，仅用于示例作用，如果控制过程中出现任何意外情况，请及时退出控制，以免发生危险。
 
+
+## 简单介绍
+joint_names_lab 策略输入输出的关节顺序      23 dof
+joint_names_real 实际机器人收发数据        29 dof
+
+做相应的映射 
+joint_names_lab根据定义的不同进行修改
+在更新策略的顺序时，打印输出的29个信息，检查是否和默认关节位置相差不大，此时应注释策略下发关节角度，转而下发默认关节角度
+with open('real_data.txt', 'a') as f:
+    for i, value in enumerate(real_data):
+        f.write(f"{value:>10.3f}")
+    f.write("\n")
+
 ## TODO
 
 - [ ] 稳定走路策略
 - [ ] mimic
 - [ ] dreamwaq爬楼梯
-
 
 
 ## 🎉  致谢
