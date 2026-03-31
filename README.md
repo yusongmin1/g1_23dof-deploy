@@ -14,14 +14,6 @@
 pip install -e unitree_sdk2_python
 ```
 
-### 启动机器人
-```bash
-python deploy_real_yu_lab.py enp4s0 g1_yu_lab.yaml
-```
-
-- `net_interface`: 为连接机器人的网卡的名字，例如`enp3s0`
-- `config_name`: 配置文件的文件名。配置文件会在 `deploy/deploy_real/configs/` 下查找， 例如`g1.yaml`, `h1.yaml`, `h1_2.yaml`。
-
 ## 启动过程
 
 ### 1. 启动机器人
@@ -41,6 +33,15 @@ python deploy_real_yu_lab.py enp4s0 g1_yu_lab.yaml
 然后使用 `ifconfig` 命令查看与机器人连接的网卡的名称。网卡名称记录下来，后面会作为启动命令的参数
 
 <img src="https://oss-global-cdn.unitree.com/static/b84485f386994ef08b0ccfa928ab3830_825x484.png" width="400px">
+
+
+### 启动机器人
+```bash
+python deploy_real_yu_lab.py enp4s0 g1_yu_lab.yaml
+```
+
+- `net_interface`: 为连接机器人的网卡的名字，例如`enp3s0`
+- `config_name`: 配置文件的文件名。配置文件会在 `deploy/deploy_real/configs/` 下查找， 例如`g1.yaml`, `h1.yaml`, `h1_2.yaml`。
 
 #### 4.1 零力矩状态
 
