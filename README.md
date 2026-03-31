@@ -2,7 +2,7 @@
 
 本代码可以在实物部署训练的网络。目前支持的机器人包括 Unitree G1 23 dof 
 
-[![real_g1](https://www.bilibili.com/video/BV1eDXzBKE19/?spm_id_from=333.1387.list.card_archive.click)] 
+![real_g1](./deploy.mp4)
 
 
 
